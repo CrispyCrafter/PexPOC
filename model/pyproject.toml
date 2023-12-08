@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "model"
+version = "0.1.0"
+description = ""
+authors = ["BP Greyling <bernard@rampgrowth.com>"]
+packages = [{include = "model"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = "^2.5.2"
+
+[tool.poetry.group.dev.dependencies]
+base = {path = "../", develop = true}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+run = 'model.main:main'
